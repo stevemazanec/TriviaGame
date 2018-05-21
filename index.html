@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        TriviaGame
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="startGame">
+            <h1>Beatles Trivia!</h1>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg" id="startButton">Start Game</button>
+    </div>
+    <div class="container" id="beatlesQuiz">
+        <h1>Beatles Trivia!</h1>
+        <br>
+        <h3>Time Remaining: <span id="countDown">120</span> Seconds</h3>
+        <br>
+        <p>What was the name of their first album?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1Radios1" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    Please Please Me
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    Help!
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Let it Be
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer1" id="answer1Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    With the Beatles
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Which of the following people was not a member of the Beatles at one time?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer2" id="answer1Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    Pete Best
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer2" id="answer2Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    Stuart Sutcliffe
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer2" id="answer2Radios3" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Keith Richards
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer2" id="answer2Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    Tommy Moore
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>How many albums did they release?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer3" id="answer3Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    7
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer3" id="answer3Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    9
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer3" id="answer3Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    11
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer3" id="answer3Radios4" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    13
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Which member supposedly died and was replaced during the middle of their time as a band?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer4" id="answer4Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    John Lennon
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer4" id="answer4Radios2" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    Paul McCartney
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer4" id="answer4Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    George Harrison
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer4" id="answer4Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    Ringo Starr
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>In what city did they perform their final commercial concert?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer5" id="answer5Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    London
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer5" id="answer5Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    New York
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer5" id="answer5Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Chicago
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer5" id="answer5Radios4" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    San Francisco
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Which of the following was not the name of one of their movies?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer6" id="answer6Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    Magical Mystery Tour
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer6" id="answer6Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    Help!
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer6" id="answer6Radios3" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Let it Be
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer6" id="answer6Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    A Hard Day's Night
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Which city were the band members from?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer7" id="answer7Radios1" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    Liverpool
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer7" id="answer7Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    London
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer7" id="answer7Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Manchester
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer7" id="answer7Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    Birmingham
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>On which show did they give their first live performance in the US?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer8" id="answer8Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    The Tonight Show Starring Johnny Carson
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer8" id="answer8Radios2" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    The Ed Sullivan Show
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer8" id="answer8Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Late Night with David Letterman
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer8" id="answer8Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    Last Week Tonight with John Oliver
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Which of the following was not an early name for the band?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer9" id="answer9Radios1" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    The Cavernmen
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer9" id="answer9Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    The Quarrymen
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer9" id="answer9Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Johnny & The Moon Dogs
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer9" id="answer9Radios4" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    The Silver Beetles
+                </label>
+            </div>
+        </div>
+        <br>
+        <p>Where did they give their final live performance?</p>
+        <div class="answers">
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer10" id="answer10Radios1" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios1">
+                    The Cavern Club
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer10" id="answer10Radios2" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios2">
+                    Candlestick Park
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer10" id="answer10Radios3" value="wronganswer">
+                <label class="form-check-label" for="exampleRadios3">
+                    Shea Stadium
+                </label>
+            </div>
+            <div class="form-check form-check-inline answers">
+                <input class="form-check-input" type="radio" name="answer10" id="answer10Radios4" value="rightanswer">
+                <label class="form-check-label" for="exampleRadios4">
+                    The rooftop of Apple Corps
+                </label>
+            </div>
+        </div>
+        <div class="container" id="endGame">
+                <button type="button" class="btn btn-primary btn-lg" id="endButton">Done</button>
+        </div>
+    </div>
+    <div class="container" id="results">
+            <h1>Beatles Trivia!</h1>
+            <br>
+            <p>All Done!</p>
+            <p>Correct Answers: <span id="correctAnswers"></span></p>
+            <p>Incorrect Answers: <span id="incorrectAnswers"></span></p>
+            <p>Unanswered: <span id="questionsUnanswered"></span></p>
+        </div>
+
+</body>
+
+</html>

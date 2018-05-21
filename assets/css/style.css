@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/beatlesFlag.jpg);
+}
+.container {
+    background: yellowgreen;
+    padding: 20px;
+    margin-top: 20px;
+}
+#startGame {
+    text-align: center;
+}
+#beatlesQuiz {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+h3 {text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 22px;
+}
+.answers {
+    text-align: center;
+}
+#endGame {
+    text-align: center;
+}
