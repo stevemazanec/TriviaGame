@@ -2,6 +2,8 @@ $(document).ready(function() {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
+    var timeRemaining;
+    var quizTimer;
     function endGame(){
         $("#beatlesQuiz").hide();
         $("#results").show();
@@ -111,12 +113,14 @@ $(document).ready(function() {
             unanswered++;
         }
     };
-    $("#beatlesQuiz,#results").hide();
-    $("#startButton").click(function(){
-        $("#startGame").hide();
+    function resetGame(){
+        correct = 0;
+        incorrect = 0;
+        unanswered = 0;
+        $("#results").hide();
         $("#beatlesQuiz").show();
-        var timeRemaining = 120;
-        var quizTimer = setInterval(function(){
+         timeRemaining = 120;
+         quizTimer = setInterval(function(){
             timeRemaining--;
             $("#countDown").text(timeRemaining);
             if(timeRemaining <= 0){
@@ -124,8 +128,23 @@ $(document).ready(function() {
                 endGame();
             };
         }, 1000)
+    }
+    $("#beatlesQuiz,#results").hide();
+    $("#startButton").click(function(){
+        $("#startGame").hide();
+        $("#beatlesQuiz").show();
+         timeRemaining = 120;
+         quizTimer = setInterval(function(){
+            timeRemaining--;
+            $("#countDown").text(timeRemaining);
+            if(timeRemaining <= 0){
+                endGame();
+            };
+        }, 1000)
     });
     $("#endButton").click(function endGame(){
+        clearInterval(quizTimer);
+        $("#countDown").text("120");
         $("#beatlesQuiz").hide();
         $("#results").show();
         checkAnswers();
@@ -133,4 +152,7 @@ $(document).ready(function() {
         $("#incorrectAnswers").text(incorrect);
         $("#questionsUnanswered").text(unanswered);
     });
+    $("#restartButton").click(function(){
+        resetGame();
+    })
 });
