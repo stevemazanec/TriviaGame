@@ -119,6 +119,7 @@ $(document).ready(function() {
         unanswered = 0;
         $("#results").hide();
         $("#beatlesQuiz").show();
+        $('.form-check-input').prop('checked', false);
          timeRemaining = 120;
          quizTimer = setInterval(function(){
             timeRemaining--;
