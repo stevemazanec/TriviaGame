@@ -1,2 +1,2 @@
 # TriviaGame
-A timed trivia game testing your knowledge of the Beatles. This quiz will display correct answers, incorrect answers, and unanswered questions either after you click to submit your answers, or when you run out of time to answer all of the questions. 
+A timed trivia game testing your knowledge of the Beatles. This quiz will display correct answers, incorrect answers, and unanswered questions either after you click to submit your answers, or when you run out of time to answer all of the questions. See the live version at https://stevemazanec.github.io/TriviaGame/
